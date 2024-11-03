@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width-device-width, initial-scale-1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Frontend Developer</p>
+                    <h1>Hi, I'm <span>Harsh</span> <br>Gupta From Rewa</h1>
+                </div>
+            </div>
+        </div>
+        <!-------About-------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/user.png">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Front-End Developer with a proactive approach and strong skills in HTML, CSS, and JavaScript, dedicated to leveraging expertise to create exceptional web solutions.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Java</span><br>Having a good command over oops in java</li>
+                                <li><span>Web Development</span><br>Web App Development</li>
+                                <li><span>DBMS</span><br>Proficient in writing sql queries</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br>Passed My High School From Maharaja Public School</li>
+                                <li><span>2024</span><br>Currently pursuing B.Tech 2nd year From Newton School of Technology X Rishihood University </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-------services--------->
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        
+                        <h2>Java</h2>
+                        <p>
+                            Java Developer with a solid foundation in building scalable, object-oriented applications and automating solutions, focused on delivering efficient and robust software.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        
+                        <h2>Web Developer</h2>
+                        <p>Enthusiastic about creating web applications, with a strong focus on using HTML, CSS, and JavaScript to build engaging and responsive user experiences.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                    <div>
+                        
+                        <h2>Database Management System</h2>
+                        <p>Experienced in developing stored procedures, triggers, and views to enhance database functionality and automate processes efficiently.</p>
+                        <a href="#">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------portfolio------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/work-1.png">
+                        <div class="layer">
+                            <h3>Slack Clone</h3>
+                            <p>A full-stack Slack clone enabling real-time messaging, workspace management, and user collaboration.</p>
+                            <a href="https://slack-clonee.vercel.app/auth/"></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/work-2.png">
+                        <div class="layer">
+                            <h3>Spotify Clone</h3>
+                            <p>A Spotify clone featuring music streaming, playlist creation, and user authentication for a seamless listening experience.</p>
+                            <a href="https://summer-projects-spotify-clone-summer-project-wh8zbsungc9x.vercel.app/"></a>
+                        </div>
+                    </div>
+                   
+                </div>
+                <a href="https://github.com/Harshkesharwani789?tab=repositories" download class="btn">See More</a>
+            </div>
+        </div>
+
+        <!-------contact----->
+        <div id="contact">
+            <div class="container">
+                 <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p>atul123564@gmail.com</p>
+                        <p>7489097790</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/harsh-gupta-878a51288/">LinkedIn</a>
+                        </div>
+                        <a href="images/Resume-Harsh Gupta.pdf" class="btn btn2">Download CV</a>
+                    </div>
+
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="NAME" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+
+                 </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright @ Harsh . Made by Harsh Gupta</p>
+            </div>
+        </div>
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname){
+                for (tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
+</html>
